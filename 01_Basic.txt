@@ -1,0 +1,60 @@
+Server is nothing but a backend software which is serving . (Not big computers it can be your laptop)
+
+JS Packages-
+express - use for routing,
+mangoos - use for database
+
+Backend Development :-
+
+Two Major components -
+
+1. Programming language (JS).   JS packages : express - handle routes
+2. Database (MangoDB).  database framework : ORM (object relational database ex. typeorm) / ODM (object document database ex. mogoose)
+                                             we are using Monggose- Object Data Modeling (ODM) library for MongoDB
+
+Browser -> API (Backend) -> 
+                             DB (In another continent (computer))
+Mobile -> API (Backend)  ->
+
+
+Backend contains - Data handle, File handle, Third party api.
+
+NodeJS is nothing but javascript runtime. (nodejs install required)
+
+Backend structure :
+
+index.js (entry point , DB connect)
+App.js (config, coockie, urlencode)
+constants (enums, dbname)
+src - 
+        DB (db connect code)
+        models (db query logic handle)
+        controllers (function handle)
+        routes ( paths or URLs that the server responds to)
+        middleware (middleware refers to functions that execute during the lifecycle of a request to a server)
+        utils (common functions)
+
+To create nodejs backend :
+    npm init  (it will create package.json) (you can add script in package.json to run command)
+    npm install express (because all nodejs works on express)
+    npm install dotenv (to store private variables)
+
+Deploy project on production :
+    (AWS, Digital Occion, Assure, herroku, render, seenode, cyclic.sh) we are using digital occion 
+    First push code on github -
+                                create repo on github and follow the steps                            
+                                create .gitignore to not push files on github
+    
+    In digital occison go to create- apps (deploy apps) - select github select repo, branch and set env variables now all set.
+        you can change domain from settings
+
+
+
+Basics : 
+    Github-codespaces, stackblitz, codesandbox  where you can code which run on browser (no need to install any environment, nodejs and all)
+    To format and beautify json go to jsonformatter website.
+    .gitignore use for not to push code files in github. see-gitignore file
+    cors policy : cross origin (diff url, diff port cant access api so you have to whitelist url,ip,domain) or use proxy. see- index.js
+    npm run build : this command bundle all project code and it will create dist folder we can upload it.
+    eraser.io : for data modeling (database structure) where you can create entity relations model and can create rough page overview to get database table fields.
+    mongoose ; use for data modeling of mongodb   (npm i mangoose).    See- data_modeling_by_mangoose folder
